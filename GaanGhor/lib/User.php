@@ -46,6 +46,10 @@
                 $msg = "<div class='alert alert-danger'><strong>Error!! </strong>Minimum length f password should be 6!</div>";
                 return $msg;
             }
+            if($password != $confirmPassword ) {
+                $msg = "<div class='alert alert-danger'><strong>Error!! </strong>Password didn't match!</div>";
+                return $msg;
+            }
 
             if ($password == $confirmPassword) {
                 $password = md5($data['password']); //generates md5 hash..encrypted
@@ -122,14 +126,16 @@
             $result = $this->getLoginUser($email, $password);  
             if ($result) {
                 //assigning data to session.php
-                Session::init();
-                Session::set("login", true);
-                Session::set("id", $result->id);
-                Session::set("firstName", $result->firstName);
-                Session::set("lastName", $result->lastName);
-                Session::set("email", $result->email);
-                Session::set("loginMsg", "<div class='alert alert-success'><strong>Success!! </strong>You are Logged In</div>");
+                //Session::init();
+                //Session::set("login", true);
+                //Session::set("id", $result->id);
+                //Session::set("firstName", $result->firstName);
+                //Session::set("lastName", $result->lastName);
+                //Session::set("email", $result->email);
+                //Session::set("loginMsg", "<div class='alert alert-success'><strong>Success!! </strong>You are Logged In</div>");
                 header("Location: index.php");
+                //$msg = "<div class='alert alert-danger'><strong>Success!! </strong>You are Logged In</div>";
+                //return $msg;
             } else {
                 $msg = "<div class='alert alert-danger'><strong>Error!! </strong>No such users available</div>";
                 return $msg;
