@@ -52,10 +52,10 @@
                         </div>
                         <div class="card-panel my-log center">
                             <form action="#"  method="POST">
-                                <div class="input-feild">
+                                <div class="input-feild mylogin">
                                     <input id="email" type="email" placeholder="Email" name="email" class="form-control">
                                 </div>
-                                <div class="input-feild">
+                                <div class="input-feild mylogin">
                                     <input type="password" id="password" name="password" placeholder="Password" class="form-control">
                                 </div>
                                 <input type="submit" value="Login" name="login" class="btn" id="go-btn">
