@@ -16,10 +16,11 @@
             $email = $data['email'];
             $password = $data['password'];
             $confirmPassword = $data['confirmPassword'];
+            $department = $data['department'];
 
             $chk_email = $this->emailCheck($email);
 
-            if ($firstName == "" OR $lastName == ""OR $email == "" OR $password == ""  OR $confirmPassword == "") {
+            if ($firstName == "" OR $lastName == "" OR $email == "" OR $password == ""  OR $confirmPassword == "" OR $department == "") {
                 $msg = "<div class='alert alert-danger'><strong>Error!! </strong>Field must not be empty</div>";
                 return $msg;
             }
@@ -54,11 +55,11 @@
             if ($password == $confirmPassword) {
                 $password = md5($data['password']); //generates md5 hash..encrypted
                 //coz md5 korle password na dileo ekta hash file generate hobe
-                $confirmPassword = md5($data['confirmPassword']);
+                //$confirmPassword = md5($data['confirmPassword']);
             }
 
             //storing data after all the validations
-            $sql = "INSERT INTO user (firstName, lastName, email, password, confirmPassword) VALUES(:firstName, :lastName, :email, :password, :confirmPassword)";
+            $sql = "INSERT INTO user (firstName, lastName, email, password, department) VALUES(:firstName, :lastName, :email, :password, :department)";
 
             $query = $this->db->pdo->prepare($sql);
 
@@ -66,7 +67,8 @@
             $query->bindValue(':lastName', $lastName);
             $query->bindValue(':email', $email);
             $query->bindValue(':password', $password);
-            $query->bindValue(':confirmPassword', $confirmPassword);
+            //$query->bindValue(':confirmPassword', $confirmPassword);
+            $query->bindValue(':department', $department);
             $result =  $query->execute();
             if ($result) {
                 $msg = "<div class='alert alert-success'><strong>Congratulations!! </strong>You have been registered successfully!</div>";
