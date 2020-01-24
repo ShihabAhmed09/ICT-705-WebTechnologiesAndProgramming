@@ -60,20 +60,27 @@
                                         <input type="text" placeholder="Last Name" class="form-control" id="lastName" name="lastName">
                                     </div>
                                     <div class="input-feild col s12 m4">
-                                        <select>
+                                        <select name="department">
                                             <option value="" disabled selected class="whitish-text">Department</option>
-                                            <option value="1">ICT</option>
-                                            <option value="2">CSE</option>
-                                            <option value="3">Mathematics</option>
-                                            <option value="4">Physics</option>
-                                            <option value="5">Chemistry</option>
-                                            <option value="6">Pharmacy</option>
-                                            <option value="7">Law</option>
-                                            <option value="8">Marketing</option>
-                                            <option value="9">Finance</option>
-                                            <option value="10">AIS</option>
-                                            <option value="11">Journalism</option>
-                                            <option value="12">Public Ad</option>
+                                            <option value="ICT">ICT</option>
+                                            <option value="CSE">CSE</option>
+                                            <option value="Mathematics">Mathematics</option>
+                                            <option value="Physics">Physics</option>
+                                            <option value="Chemistry">Chemistry</option>
+                                            <option value="Pharmacy">Pharmacy</option>
+                                            <option value="Statistics">Statistics</option>
+                                            <option value="Law">Law</option>
+                                            <option value="Marketing">Marketing</option>
+                                            <option value="Finance">Finance</option>
+                                            <option value="AIS">AIS</option>
+                                            <option value="Journalism">Journalism</option>
+                                            <option value="Public Ad">Public Ad</option>
+                                            <option value="Bangla">Bangla</option>
+                                            <option value="English">English</option>
+                                            <option value="Anthropology">Anthropology</option>
+                                            <option value="Archeology">Archeology</option>
+                                            <option value="Economics">Economics</option>
+                                            <option value="Management">Management</option>
 
                                         </select>
                                     </div>
