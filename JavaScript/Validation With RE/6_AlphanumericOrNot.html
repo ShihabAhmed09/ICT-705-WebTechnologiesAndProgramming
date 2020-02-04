@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alphanumeric Or Not</title>
+</head>
+<body>
+    <script>
+        function alphanumeric(str) {
+            regexp = /^[0-9a-zA-Z]+$/;
+  
+            if (regexp.test(str)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+        console.log(alphanumeric("ashduiahf98976"));
+        console.log(alphanumeric("ashdu$%^iahf98976"));
+    </script>
+</body>
+</html>

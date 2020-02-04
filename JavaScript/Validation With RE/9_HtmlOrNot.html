@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Html Or Not</title>
+</head>
+<body>
+    <script>
+        function is_html(str) {
+            regexp = /<([a-z]+) *[^/]*?>/;
+  
+            if (regexp.test(str)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        console.log(is_html('')); //false
+
+        console.log(is_html('')); //false
+
+        console.log(is_html('.selector')); //false
+        
+        console.log(is_html('<p>')); //true
+    </script>
+</body>
+</html>

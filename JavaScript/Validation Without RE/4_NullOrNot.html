@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Null Or Not</title>
+</head>
+<body>
+    <script>
+        /* function is_number(value) {
+            return !isNaN(value) && toString.call(value) === '[object Number]';
+        } */
+
+        function is_null(val) {
+            return val === null;
+        }
+
+        console.log(is_null(null));
+
+        console.log(is_null(42.32));
+
+        console.log(is_null(72));
+    </script>
+</body>
+</html>

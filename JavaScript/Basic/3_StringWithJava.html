@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>String Check</title>
+</head>
+<body>
+    <script>
+        function start_spec_str(str) {
+            if(str.length < 4) {
+                return false;
+            }
+            font = str.substring(0,4);
+            if (font == 'Java') {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        //this will ask for an input
+        var retVal = prompt("Enter a String : ", "Your String here");
+        document.write(start_spec_str(retVal));
+
+        //this will show output in console
+        console.log(start_spec_str("JavaScript"));
+        console.log(start_spec_str("Java"));
+        console.log(start_spec_str("Python"));
+    </script>
+</body>
+</html>

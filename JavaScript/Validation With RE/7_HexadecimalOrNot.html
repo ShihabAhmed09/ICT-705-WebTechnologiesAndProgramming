@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hexadecimal Or Not</title>
+</head>
+<body>
+    <script>
+        function is_hexadecimal(str) {
+            regexp = /^[0-9a-fA-F]+$/;
+  
+            if (regexp.test(str)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+
+        console.log(is_hexadecimal("ffffff"));
+
+        console.log(is_hexadecimal("fz5500"));
+    </script>
+</body>
+</html>

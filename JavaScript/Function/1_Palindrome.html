@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Palindrome</title>
+</head>
+<body>
+    <script>
+        function palindrome(str) {
+            var pattern = /[\W_]+$/;
+            var check = str.toLowerCase().replace(pattern,""); 
+            var reverse = check.split('').reverse().join('')
+            if(str === reverse){
+                return true
+            }else{
+                return false
+            }
+        }
+        console.log(palindrome('madam'));
+        console.log(palindrome('12213'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number Of Vowels</title>
+</head>
+<body>
+    <script>
+        function vowel_count(str1) {
+            var vowel_list = 'aeiouAEIOU';
+            var vcount = 0;
+
+            for(var x = 0; x < str1.length ; x++) {
+                if (vowel_list.indexOf(str1[x]) !== -1) {
+                    vcount += 1;
+                }
+  
+            }
+            return vcount;
+        }   
+        console.log(vowel_count("The quick brown fox"));
+       
+    </script>
+</body>
+</html>

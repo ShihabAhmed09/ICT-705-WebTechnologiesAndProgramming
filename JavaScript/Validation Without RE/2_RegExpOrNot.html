@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RegExr Or Not</title>
+</head>
+<body>
+    <script>
+        function is_url(str) {
+            
+            return toString.call(str) === '[object RegExp]'
+        }
+
+        console.log(is_url("http://www.example.com")); //not regular expression
+        console.log(is_url("shihab")); //not regular expression
+        console.log(is_url(/shihab/)); //with regular expression
+    </script>
+</body>
+</html>

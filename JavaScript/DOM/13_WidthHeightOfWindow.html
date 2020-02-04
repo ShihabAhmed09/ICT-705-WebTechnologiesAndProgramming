@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Width Height Of Window</title>
+</head>
+
+<!-- Resize the window (here output panel) and see the result !--> 
+<body onload="getSize()" onresize="getSize()">
+
+    <div id="wh"> 
+        <!-- Place height and width size here! --> 
+    </div>
+
+    <script>
+        function getSize() {
+            var w = document.documentElement.clientWidth;
+            var h = document.documentElement.clientHeight;
+        
+            // put the result into a h1 tag
+            document.getElementById('wh').innerHTML = "<h1>Width: " + w + "<br> Height: " + h + "</h1>";
+        }
+    </script>
+</body>
+</html>

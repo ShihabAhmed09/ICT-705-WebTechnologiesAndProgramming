@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Longest Word In String</title>
+</head>
+<body>
+    <!-- The match() method is used to retrieve the matches when matching a string against a regular expression.
+    Therefore str.match(/\w[a-z]{0,}/gi) will return ["Web", "Development", "Tutorial"].
+
+    For loop checks the length of the array element and compare with previous one and finally return the longest string. -->
+    <script>
+        function find_longest_word(str) {
+            var array1 = str.match(/\w[a-z]{0,}/gi);
+            var result = array1[0];
+
+            for(var x = 1 ; x < array1.length ; x++) {
+                if(result.length < array1[x].length) {
+                    result = array1[x];
+                } 
+            }
+            return result;
+        }
+
+        console.log(find_longest_word('Web Development Tutorial'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find Number Of Elements</title>
+</head>
+<body>
+    <script>
+        function test_same_elements_both_arrays(arr1, arr2) {
+            var result = 0;
+            for(var i=0; i< arr1.length; i++) {
+                for(var j=0; j<arr2.length; j++) {
+                    if(arr1[i] == arr2[j]) {
+                        result++;
+                    }
+                }
+            }
+            return result;
+        }
+
+        /* var retVal = prompt("Enter a String : ", "Your String here");
+        var retVal2 = prompt("Enter a String : ", "Your String here");
+        document.write(test_same_elements_both_arrays(retVal, retVal2)); */
+
+        console.log(test_same_elements_both_arrays([1,2,3,4], [1,2,3,4]));
+        console.log(test_same_elements_both_arrays([1,2,3,4], [1,2,3,5]));
+        console.log(test_same_elements_both_arrays([1,2,3,4], [11,22,33,44]));
+    </script>
+</body>
+</html>
